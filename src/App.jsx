@@ -18,7 +18,7 @@ function App() {
     }, []);
 
   useEffect(()=>{
-    localStorage.setItem('tareas', JSON.stringify( tareas ))
+    localStorage.setItem('tareas', JSON.stringify(tareas))
   }, [tareas])
 
   //Eliminar tarea
