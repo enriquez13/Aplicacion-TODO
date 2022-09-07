@@ -10,7 +10,7 @@ const ListaTareas =({tareas, setTarea, eliminarTarea})=>{
  //   }, [tareas])
 
     return (
-        <div className="md:w-1/2 lg:w-1/2 mx-5 mb-10 md:h-screen  md:overflow-scroll">
+        <div className="md:w-1/2 lg:w-1/2 mx-5 mb-10 md:h-screen  md:overflow-auto">
             
             {tareas && tareas.length ? (
                 <>
