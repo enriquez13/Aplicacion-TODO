@@ -10,11 +10,11 @@ const ListaTareas =({tareas, setTarea, eliminarTarea})=>{
  //   }, [tareas])
 
     return (
-        <div className="md:w-1/2 lg:w-2/5 mx-5 mb-10 md:h-screen md:overflow-scroll">
+        <div className="md:w-1/2 lg:w-1/2 mx-5 mb-10 md:h-screen  md:overflow-scroll">
             
             {tareas && tareas.length ? (
                 <>
-                <h2 className="font-black text-3xl text-center mb-10">Tareas por hacer</h2>
+                <h2 className="font-black text-2xl text-center mt-5 mb-5">Tareas por hacer</h2>
             
                 {tareas.map((tarea)=>{
                     return(
@@ -27,7 +27,7 @@ const ListaTareas =({tareas, setTarea, eliminarTarea})=>{
                     )
                 })}
                 </>
-                ) : <h2 className="font-black text-3xl text-center mb-10">No hay tareas por hacer</h2>}
+                ) : <h2 className="font-black text-2xl text-center mt-5 mb-5">No hay tareas por hacer</h2>}
             
             
         </div>

@@ -67,50 +67,50 @@ const Form =({tareas, setTareas, tarea, setTarea})=>{
     };
 
     return (
-        <div className="md:w-1/2 lg:w-2/5 mx-5">
-            <h2 className="font-black text-3xl text-center mb-10">Creación de tareas </h2>
+        <div className="md:w-1/2 lg:w-1/2 mx-5 lg:px-10">
+            <h2 className="font-black text-2xl text-center mt-5 mb-5">Creación de tareas </h2>
 
-            <form onSubmit={ handleSubmit } className="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
-                {error && <AlertError><p>Se deben diligenciar todos los campos</p></AlertError>}
+            <form onSubmit={ handleSubmit } className="shadow-md rounded-lg py-10 px-5 mb-10">
+                {error && <AlertError><p><b>Se deben diligenciar todos los campos</b></p></AlertError>}
                 <div className="mb-5">
-                    <label htmlFor="titulo" className="block text-gray-700 uppercase font-bold">Título</label>
+                    <label htmlFor="titulo" className="block text-black uppercase font-bold">Título</label>
                     <input
                         id="titulo"
                         type="text" 
                         placeholder="Título de la tarea" 
-                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-gray-400" 
+                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-black" 
                         value={ titulo }
                         onChange={ (e)=> setTitulo(e.target.value) } />
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="fecha" className="block text-gray-700 uppercase font-bold">Fecha</label>
+                    <label htmlFor="fecha" className="block text-black uppercase font-bold">Fecha</label>
                     <input
                         id="fecha"
                         type="date" 
-                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-gray-400" 
+                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-blue-500" 
                         value={ fecha }
                         onChange={ (e)=> setFecha(e.target.value) } />
                 </div>
                 <div className="mb-5">
-                    <label htmlFor="descripcion" className="block text-gray-700 uppercase font-bold">Descripción</label>
+                    <label htmlFor="descripcion" className="block text-black uppercase font-bold">Descripción</label>
                     <textarea
                         id="descripcion"
                         type="text" 
                         placeholder="Descripción de la tarea" 
-                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-gray-400" 
+                        className="border-2 w-full p-2 mt-2 rounded-md placeholder-gray-900" 
                         value={ descripcion }
                         onChange={ (e)=> setDescripcion(e.target.value) } />
                 </div>
                 {tarea.id ? (
                     <input 
                     type="submit"
-                    className="bg-blue-600 w-full p-2 text-white uppercase font-bold rounded-md hover:bg-blue-700 transition-colors cursor-pointer"
+                    className="bg-sky-900 w-full p-2 text-white uppercase font-bold rounded-md hover:bg-sky-800 transition-colors cursor-pointer"
                     value="Actualizar tarea"
                 />
                 ) : (
                     <input 
                         type="submit"
-                        className="bg-blue-600 w-full p-2 text-white uppercase font-bold rounded-md hover:bg-blue-700 transition-colors cursor-pointer"
+                        className="bg-sky-900 w-full p-2 text-white uppercase font-bold rounded-md hover:bg-sky-800 transition-colors cursor-pointer"
                         value="Crear Tarea"
                     />
                 )

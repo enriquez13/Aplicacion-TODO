@@ -10,26 +10,26 @@ const Tareas = ({tarea, setTarea, eliminarTarea})=>{
     }
 
     return (
-        <div className="bg-white shadown-md px-5 py-10 reounded-lg mt-5">
-            <p className="font-bold mb-3 text-gray-700 uppercase">
+        <div className="rounded-lg ring-2 ring-slate-900/5 lg:mx-10 mb-5 px-5 py-10 reounded-lg ">
+            <p className="font-bold mb-3 text-black uppercase">
                 Título: {' '}
                 <span className="font-normal normal-case">{titulo}</span>
             </p>
-            <p className="font-bold mb-3 text-gray-700 uppercase">
+            <p className="font-bold mb-3 text-black uppercase">
                 Fecha: {' '}
                 <span className="font-normal normal-case">{fecha}</span>
             </p>
-            <p className="font-bold mb-3 text-gray-700 uppercase">
+            <p className="font-bold mb-3 text-black uppercase">
                 Descripción: {' '}
                 <span className="font-normal normal-case">{descripcion}
                 </span>  
             </p>
-            <div className="flex justify-between">
-                <button className="bg-blue-600 hover:bg-blue-700 mt-4 py-2 px-10 rounded-md text-white font-bold" 
+            <div className="flex justify-center">
+                <button className="bg-sky-800 hover:bg-sky-900 w-3/6 mt-5 mr-2 py-2 px-12 rounded-md text-white font-bold" 
                 type="button"
                 onClick={()=> setTarea(tarea)}>
                     Editar</button>
-                <button className="bg-red-600 hover:bg-red-700 mt-4 py-2 px-10 rounded-md text-white font-bold" type="button"
+                <button className="bg-rose-700 hover:bg-rose-800 w-3/6 mt-5 ml-2 py-2 px-12 rounded-md text-white font-bold" type="button"
                 onClick={handleEliminar}>
                     Eliminar</button>
             </div>
